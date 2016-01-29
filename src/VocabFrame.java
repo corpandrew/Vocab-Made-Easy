@@ -233,7 +233,7 @@ public class VocabFrame extends JFrame {
 
 		pack();
 		utils.customFormatText = customizeField.getText();
-		setTitle("Vocabulary Program");
+		setTitle("Vocab Made Easy");
 		setVisible(true);
 	}// </editor-fold>
 
