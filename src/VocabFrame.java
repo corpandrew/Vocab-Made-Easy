@@ -1,21 +1,33 @@
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.nio.charset.Charset;
-import java.nio.file.Files;
 import java.util.ArrayList;
 
-import javax.swing.*;
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 import javax.swing.event.CaretEvent;
 import javax.swing.event.CaretListener;
-import javax.swing.plaf.FileChooserUI;
 
 public class VocabFrame extends JFrame {
 
-    Utils utils = new Utils();
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	Utils utils = new Utils();
 
     private JButton getVocabButton;
     private JButton resetButton;
@@ -34,7 +46,6 @@ public class VocabFrame extends JFrame {
     private JTextField exampleField;
     private JTextField customizeField;
 
-    @SuppressWarnings("unchecked")
     private void initComponents() {
 
         wordsListLabel = new javax.swing.JLabel();
@@ -60,7 +71,7 @@ public class VocabFrame extends JFrame {
         wordsListLabel.setLabelFor(wordsListLabel);
         wordsListLabel.setText("Words List");
 
-        wordsTextArea.setColumns(20);
+        wordsTextArea.setColumns(15);
         wordsTextArea.setRows(5);
         wordsScrollPane.setViewportView(wordsTextArea);
 
@@ -181,7 +192,7 @@ public class VocabFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 definitionTextArea.setText("");
-                utils.i = 1;
+                Utils.i = 1;
             }
         });
 
