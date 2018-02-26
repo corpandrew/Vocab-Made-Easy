@@ -48,22 +48,22 @@ public class VocabFrame extends JFrame {
 
     private void initComponents() {
 
-        wordsListLabel = new javax.swing.JLabel();
-        wordsScrollPane = new javax.swing.JScrollPane();
-        wordsTextArea = new javax.swing.JTextArea();
-        partOfSpeechRadio = new javax.swing.JRadioButton();
-        includeMoreDefinitionsRadio = new javax.swing.JRadioButton();
-        customizeOutputRadio = new javax.swing.JRadioButton();
-        exampleField = new javax.swing.JTextField();
-        exampleLabel = new javax.swing.JLabel();
-        customizeField = new javax.swing.JTextField();
-        definitionScrollPane = new javax.swing.JScrollPane();
-        definitionTextArea = new javax.swing.JTextArea();
-        definitionsListLabel = new javax.swing.JLabel();
-        getVocabButton = new javax.swing.JButton();
-        resetButton = new javax.swing.JButton();
-        filepathButton = new javax.swing.JButton();
-        filepathField = new javax.swing.JTextField();
+        wordsListLabel = new JLabel();
+        wordsScrollPane = new JScrollPane();
+        wordsTextArea = new JTextArea();
+        partOfSpeechRadio = new JRadioButton();
+        includeMoreDefinitionsRadio = new JRadioButton();
+        customizeOutputRadio = new JRadioButton();
+        exampleField = new JTextField();
+        exampleLabel = new JLabel();
+        customizeField = new JTextField();
+        definitionScrollPane = new JScrollPane();
+        definitionTextArea = new JTextArea();
+        definitionsListLabel = new JLabel();
+        getVocabButton = new JButton();
+        resetButton = new JButton();
+        filepathButton = new JButton();
+        filepathField = new JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Vocab Made Easy");
@@ -93,6 +93,7 @@ public class VocabFrame extends JFrame {
 
         definitionTextArea.setColumns(20);
         definitionTextArea.setRows(5);
+        definitionTextArea.setLineWrap(true);
         definitionScrollPane.setViewportView(definitionTextArea);
 
         definitionsListLabel.setText("Definition List");
